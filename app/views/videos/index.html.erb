@@ -19,14 +19,10 @@
             <div class="col-md-4">
               <div class="yt_video thumbnail">
                 <%= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
-                                      class: 'img-rounded'), video.link , target: '_blank' %>
+                                      class: 'img-rounded'), video_path(video), target: '_blank' %>
                 <div class="caption">
                   <h5><%= video.title %></h5>
-                  
-                  <p>
-                    <span class="glyphicon glyphicon glyphicon-thumbs-up"></span> <%= video.likes %>
-                    <span class="glyphicon glyphicon glyphicon-thumbs-down"></span> <%= video.dislikes %>
-                  </p>
+        
                 </div>
               </div>
             </div>
